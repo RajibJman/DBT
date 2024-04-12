@@ -23,6 +23,7 @@ casted_datatypes AS (
         TO_DATE(DATE, 'MM/DD/YYYY') AS date_value,
         TO_TIME(TIME) AS time_value,
         CAST(DETAILS AS VARCHAR) AS details
+
     FROM
         datatype_conversion 
 )

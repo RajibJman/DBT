@@ -1,0 +1,117 @@
+version: 2
+
+models:
+  - name: stg_events
+    columns:
+      - name: marks_id
+        tests:
+          - unique
+          - not_null
+
+      - name: date_value
+        tests:
+          - not_null
+
+      - name: time_value
+        tests:
+          - not_null
+
+      - name: details
+        tests:
+          - not_null    
+
+
+  - name: stg_marks
+    columns:
+      - name: marks_id
+        tests:
+          - unique                        # Check if values are unique
+          - not_null                       # Check if the column values are not null
+          
+      - name: moduleid
+        tests:
+          - not_null                       # Check if the column values are not null
+          
+      - name: userid
+        tests:
+          - not_null                       # Check if the column values are not null
+          
+      - name: marks_value
+        tests:
+          - not_null          
+
+  - name: stg_modules
+    columns:
+      - name: module_id
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: module_name
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: start_date
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: end_date
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: module_status
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: quiz_id
+        tests:                   
+          - not_null                      # Check if the column values are not null
+          
+      - name: trainer
+        tests:
+          - not_null                      # Check if the column values are not null        
+
+  - name: stg_quizzes
+    columns:
+      - name: topic_id
+        tests:
+          - unique                        # Check if values are unique
+          - not_null                      # Check if the column values are not null
+          
+      - name: topic_name
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: questions
+        tests:
+          - not_null  
+
+
+  - name: stg_registers
+    columns:
+      - name: user_id
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: name
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: email
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: password
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: role
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: check_reset
+        tests:
+          - not_null                      # Check if the column values are not null
+          
+      - name: modules
+        tests:
+          - not_null     
